@@ -1,8 +1,15 @@
 body {
     display: flex;
     justify-content: center;
+    background:linear-gradient(to bottom, yellow,rgb(231, 226, 226))
 }
 
 .search {
     width:100%;
+    padding:10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+::placeholder {
+    text-transform: lowercase;
 }
