@@ -1,15 +1,28 @@
 body {
     display: flex;
     justify-content: center;
-    background:linear-gradient(to bottom, yellow,rgb(231, 226, 226))
+    background:rgb(248, 253, 182)
 }
 
 .search {
     width:100%;
     padding:10px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 700;
 }
 ::placeholder {
     text-transform: lowercase;
+}
+
+.suggestions {
+    margin-left:20px;
+    margin-top:20px;
+}
+li {
+    list-style: none;
+}
+
+.hl {
+    background-color: yellow;
+    text-transform: capitalize;
 }
