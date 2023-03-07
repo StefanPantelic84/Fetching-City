@@ -11,12 +11,12 @@ const input = document.querySelector(".search");
 const suggestions = document.querySelector(".suggestions");
 
 function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function findCity(searchWord, list) {
   return list.filter((li) => {
-    const regex = new RegExp(searchWord, "gi"); 
+    const regex = new RegExp(searchWord, "gi");
     return li.city.match(regex);
   });
 }
@@ -33,7 +33,9 @@ function displayCity() {
         regex,
         `<span class="hl">${this.value}</span>`
       );
-      return `<li>${myCity} ${place.state} ${numberWithCommas(place.population)}</li>`;
+      return `<li>${myCity} ${place.state} ${numberWithCommas(
+        place.population
+      )}</li>`;
     })
     .join("");
   suggestions.innerHTML = html;
